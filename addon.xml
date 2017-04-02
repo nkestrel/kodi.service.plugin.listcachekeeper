@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<addon id="service.plugin.listcachekeeper"
+       name="List Cache Keeper"
+       provider-name="Kestrel"
+       version="1.0.0">
+  <requires>
+    <import addon="xbmc.python" version="2.23.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py" start="login"/>
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="contextitem.py">
+        <label>32400</label>
+        <visible>SubString(Window(Home).Property(service.plugin.listcachekeeper.showRefresh), TRUE) + SubString(Container.FolderPath, plugin://)</visible>
+      </item>
+    </menu>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Reshow media plugin lists faster.</summary>
+    <description lang="en">Keeps media plugin list's cache files so they can be used to reshow lists faster. Lists can be automatically expired after a specified number of hours or manually refreshed via context menu or keymap.</description>
+    <disclaimer lang="en">Note this addon write-protects list cache files which prevents them from being refreshed by normal means.</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <news></news>
+    <source>https://github.com/</source>
+    <forum>http://forum.xbmc.org/showthread.php?</forum>
+  </extension>
+</addon>

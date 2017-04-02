@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <!-- General category -->
+  <string id="32000">General</string>
+  <string id="32010">Show [B]Refresh list[/B] in context menu</string>
+  <string id="32020">Check for list changes in background and refresh</string>
+  <string id="32021">        Minimum list age (minutes)</string>
+  <string id="32022">        Ask to refresh</string>
+  <string id="32050">Delete all list caches</string>
+	<string id="32060">Debug</string>
+  <string id="32090">Note this addon write-protects list cache files which prevents them from being</string>
+	<string id="32091">refreshed by normal means.</string>
+
+  <!-- Expire category -->
+  <string id="32100">Expire</string>
+	<string id="32130">Expire list caches</string>
+	<string id="32131">        Expire time for file lists (hours)</string>
+	<string id="32132">        Expire time for folder lists (hours)</string>
+	<string id="32133">        Ask to refresh expired list</string>
+	<string id="32134">        Expire on startup</string>
+	<string id="32135">        Expire when idle</string>
+	<string id="32136">                After elapsed hours</string>
+	<string id="32137">        Expire now</string>
+
+  <!-- Context menu -->
+  <string id="32400">Refresh list</string>
+
+  <!-- Dialogs -->
+	<string id="32501">Delete all list caches?</string>
+	<string id="32503">Refresh expired list?</string>
+	<string id="32505">Clean expired list caches?</string>
+	<string id="32507">System is missing</string>
+	<string id="32508">command which is needed</string>
+	<string id="32509">for this service to work.</string>
+	<string id="32510">service will now stop.</string>
+	<string id="32512">Insufficient permission to protect cache files.</string>
+	<string id="32513">List has changed. Refresh?</string>
+</strings>

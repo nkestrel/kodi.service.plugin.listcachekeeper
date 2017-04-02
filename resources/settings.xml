@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <!-- General -->
+  <category label="32000">
+    <setting id="showRefresh" type="bool" label="32010" default="true" />
+    <setting id="checkChangeEnable" type="bool" label="32020" default="false"/>
+    <setting id="checkChangeMinMinutes" type="number" label="32021" default="20" enable="eq(-1,true)"/>
+    <setting id="checkChangePrompt" type="bool" label="32022" default="true" enable="eq(-2,true)"/>
+    <setting type="action" label="32050" action="SetProperty($ID.doDeleteAllCaches, true, Home)"/>
+    <setting id="debug" type="bool" label="32060" default="false" />
+    <setting label="32090" type="lsep"/>
+    <setting label="32091" type="lsep"/>
+	</category>
+  <!-- Expire -->
+  <category label="32100">
+    <setting id="expireEnable" type="bool" label="32130" default="true"/>
+    <setting id="expireFilesHours" type="number" label="32131" default="16" enable="eq(-1,true)"/>
+    <setting id="expireFoldersHours" type="number" label="32132" default="168" enable="eq(-2,true)"/>
+    <setting id="expirePrompt" type="bool" label="32133" default="false" enable="eq(-3,true)"/>
+    <setting id="cleanStartup" type="bool" label="32134" default="true" enable="eq(-4,true)"/>
+    <setting id="cleanIdle" type="bool" label="32135" default="true" enable="eq(-5,true)"/>
+    <setting id="cleanIdleHours" type="number" label="32136" default="24" enable="eq(-6,true) + eq(-1,true)"/>
+    <setting type="action" label="32137" action="SetProperty($ID.doCleanExpiredCaches, true, Home)" enable="eq(-7,true)"/>
+  </category>
+</settings>
