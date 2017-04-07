@@ -19,7 +19,7 @@
     <setting id="expirePrompt" type="bool" label="32133" default="false" enable="eq(-3,true)"/>
     <setting id="cleanStartup" type="bool" label="32134" default="true" enable="eq(-4,true)"/>
     <setting id="cleanIdle" type="bool" label="32135" default="true" enable="eq(-5,true)"/>
-    <setting id="cleanIdleHours" type="number" label="32136" default="24" enable="eq(-6,true) + eq(-1,true)"/>
+    <setting id="cleanIdleHours" type="number" label="32136" default="2" enable="eq(-6,true) + eq(-1,true)"/>
     <setting type="action" label="32137" action="SetProperty($ID.doCleanExpiredCaches, true, Home)" enable="eq(-7,true)"/>
   </category>
 </settings>
