@@ -19,13 +19,13 @@ and either root access or permission to `sudo chattr`.
 
 **Keeping lists**
 
-Kodi caches most plugin lists but only keeps the cache files for going
-backwards to the previous list. This addon runs as a service in the
-background, protecting cache files it encounters for video, music and picture
-plugins so they are reused rather than deleted. Cached lists are much faster
-to load as they don't need to start any scripts or access the network which
-is beneficial for lower performance hardware and internet connections. Faster
-systems can also benefit from virtually instant list reshow.
+Kodi caches most plugin lists but only keeps the cache files for going 
+backwards to the previous list. This addon runs as a service in the 
+background, protecting cache files it encounters for video, music and picture 
+plugin lists so they are reused rather than deleted. Cached lists are much 
+faster to load as they don't need to start any scripts or access the network 
+which is beneficial for lower performance hardware and internet connections. 
+Faster systems can also benefit from virtually instant list reshow.
 
 Cached lists will not refresh when they are shown unless they have expired,
 so any changes like new items, favorites, categories or search results will
@@ -33,7 +33,7 @@ not be seen until the list is manually refreshed.
 
 Plugins can prevent their own lists from being cached but this is usually
 only done for hard-coded lists that load quickly. Accessing lists remotely
-with JSONRPC does not use cache files so there is no benefit.
+with JSON RPC does not use cache files so there is no benefit.
 
 On startup and when displaying cached lists, the log will show errors as Kodi
 tries and fails to delete the protected cache files, this is normal and
