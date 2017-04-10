@@ -33,10 +33,9 @@ so any changes like new items, favorites, categories or search results will
 not be seen until the list is manually refreshed.
 
 Plugins can prevent their own lists from being cached, typically this is done 
-for hard-coded lists or lists that load quickly, sometimes it is done for all 
-lists but there is usually an option to enable it in the plugin's settings. 
-Accessing lists remotely with JSON RPC does not use cache files so there is 
-no benefit.
+for hard-coded lists or lists that load quickly, some plugins make it 
+optional. Accessing lists remotely with JSON RPC does not use cache files so 
+there is no benefit.
 
 On startup and when displaying cached lists, the log will show errors as Kodi
 tries and fails to delete the protected cache files, this is normal and
@@ -97,15 +96,16 @@ Lists will stop being refreshed if the service crashes for whatever reason,
 disabling and re-enabling the addon will restart the service.
 
 
-**Uninstalling**
+**Disabling/Uninstalling**
 
-Disabling/uninstalling this addon within Kodi automatically removes 
-protection from all cache files to avoid being stuck with old lists. Manual 
-removal outside of Kodi requires doing this manually. The list cache files 
-have the extension `*.fi` and are located in the `cache/archive_cache` folder 
-(`cache` folder prior to Krypton 17.0). On Windows they are protected by the 
-read-only flag and can be simply deleted in File Explorer, on Linux the 
-`chattr` command needs to be used to remove the immutable flag before they 
-can be deleted.
+Before disabling or uninstalling this addon it is important to delete all 
+list caches to avoid being stuck with old lists. This can be done in the 
+addon's settings, if you forget you can always temporarily re-enable or 
+re-install the addon.
 
-
+Alternatively you can manually delete the list cache files. The files have 
+extension `*.fi` and are located in the `cache/archive_cache` folder (`cache` 
+folder prior to Krypton 17.0). On Windows they are protected by a read-only 
+flag and can be simply deleted in File Explorer. On Linux the `chattr` 
+command needs to be used to remove the immutable flag before they can be 
+deleted.

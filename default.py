@@ -58,7 +58,6 @@ windows             = False
 platform            = 0
 sudoExists          = False
 requireSudo         = False
-quitting            = False
 refreshing          = False
 dbglevel            = 3
 
@@ -85,9 +84,6 @@ def run():
 
     if not platform_check():
         return False
-
-    # Protect existing cache files
-    protect_all_caches(protect=True)
 
     # Clear any existing window properties
     homewindow.setProperty(PROP_DO_REFRESH, 'false')
@@ -163,11 +159,6 @@ def run():
                 lastPath = ''
 
         monitor.waitForAbort(0.5)
-
-    # Unprotect all caches when disabling or uninstalling to avoid
-    # being stuck with old lists
-    if not quitting:
-        protect_all_caches(protect=False)
 
     del monitor
 
@@ -492,13 +483,6 @@ def delete_all_caches(ask):
     del dialog
 
 
-def protect_all_caches(protect):
-    for filename in os.listdir(pathCaches):
-        if filename.endswith(CACHE_FILE_EXT):
-            file = os.path.join(pathCaches, filename)
-            change_readonly(file, protect)
-
-
 def test_require_sudo(file):
     global requireSudo
     # Try to use chattr without sudo
@@ -658,12 +642,6 @@ class MyMonitor(xbmc.Monitor):
 
     def onSettingsChanged(self):
         self.update_settings()
-
-    def onNotification(self, sender, method, data):
-        if method == 'System.OnQuit':
-            global quitting
-            quitting = True
-
 
 if __name__ == '__main__':
     run()

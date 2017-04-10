@@ -7,9 +7,10 @@
   <string id="32021">        Minimum list age (minutes)</string>
   <string id="32022">        Ask to refresh</string>
   <string id="32050">Delete all list caches</string>
-	<string id="32060">Debug</string>
+  <string id="32060">Debug</string>
   <string id="32090">Note this addon write-protects list cache files which prevents them from being</string>
-	<string id="32091">refreshed by normal means.</string>
+  <string id="32091">refreshed by normal means. Delete all list caches before disabling/uninstalling</string>
+  <string id="32092">to avoid being stuck with old lists.</string>
 
   <!-- Expire category -->
   <string id="32100">Expire</string>

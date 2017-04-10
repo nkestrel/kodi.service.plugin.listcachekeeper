@@ -10,7 +10,8 @@
     <setting id="debug" type="bool" label="32060" default="false" />
     <setting label="32090" type="lsep"/>
     <setting label="32091" type="lsep"/>
-	</category>
+    <setting label="32092" type="lsep"/>
+  </category>
   <!-- Expire -->
   <category label="32100">
     <setting id="expireEnable" type="bool" label="32130" default="true"/>

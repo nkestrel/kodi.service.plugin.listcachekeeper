@@ -2,7 +2,7 @@
 <addon id="service.plugin.listcachekeeper"
        name="List Cache Keeper"
        provider-name="Kestrel"
-       version="1.0.0">
+       version="1.1.0">
   <requires>
     <import addon="xbmc.python" version="2.23.0"/>
   </requires>
@@ -17,13 +17,19 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Reshow media plugin lists faster.</summary>
-    <description lang="en">Keeps media plugin list's cache files so they can be used to reshow lists faster. Lists can be automatically expired after a specified number of hours or manually refreshed via context menu or keymap.</description>
+    <description lang="en">Keeps media plugin list's cache files so they can be used to reshow lists faster. Lists can be automatically expired after a specified number of hours or manually refreshed via context menu or keymap.[CR][CR]IMPORTANT: Delete all list caches before disabling/uninstalling to avoid being stuck with old lists.</description>
     <disclaimer lang="en">Note this addon write-protects list cache files which prevents them from being refreshed by normal means.</disclaimer>
     <language></language>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <news></news>
     <source>https://github.com/nkestrel/kodi.service.plugin.listcachekeeper</source>
     <forum>http://forum.kodi.tv/showthread.php?tid=311656</forum>
+    <news>
+v1.1.0
+ - Fixed freeze on disable/uninstall, can't unprotect cache files here so user must do it themselves.
+
+v1.0.0
+ - Initial release.
+    </news>
   </extension>
 </addon>
